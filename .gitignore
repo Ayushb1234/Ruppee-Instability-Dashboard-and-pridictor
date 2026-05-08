@@ -21,16 +21,16 @@ ENV/
 *.pem
 *.key
 
-# Jupyter notebooks
+# Jupyter local state
 .ipynb_checkpoints/
+.jupyter/
 
-# Streamlit / dashboard local state
+# Streamlit local/private files
 .streamlit/secrets.toml
-.streamlit/config.toml
 
-# Generated data and model artifacts
-data/processed/*
-data/external/*
+# Generated data and deployment-heavy artifacts
+data/processed/
+data/external/
 models/
 artifacts/
 outputs/
@@ -41,10 +41,6 @@ reports/
 *.h5
 *.keras
 *.onnx
-
-# Keep data folders trackable when placeholders are added
-!data/processed/.gitkeep
-!data/external/.gitkeep
 
 # Logs and temporary files
 *.log
